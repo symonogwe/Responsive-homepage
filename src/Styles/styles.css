@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Volkhov&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Aleo&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@700&display=swap");
+
+@keyframes left-to-right {
+  from {
+    transform: translateX(-200%);
+    opacity: 0%;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+}
+
+@keyframes right-to-left {
+  from {
+    transform: translateX(200%);
+    opacity: 0%;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+}
+
+:root {
+  --base-color: #1d2d44;
+  --sub-base-color: #3e5c76;
+  --sub-color: #0d1321;
+  --text-color: #f0ebd8;
+  --base-p-fs: calc(0.8rem + 0.7vw);
+  --base-h1-fs: calc(2rem + 2vw);
+  --base-h2-fs: calc(1rem + 0.8vw);
+  --base-h3-fs: calc(1.2rem + 1vw);
+  --base-h1-ff: "Secular One", sans-serif;
+  --base-h2-ff: "Assistant", sans-serif;
+  --base-p-ff: "Volkhov", sans-serif;
+  --logo-width: max(25px, 20%);
+  --base-paragraph-ff: "Nanum Myeongjo", sans-serif;
+  --base-margin: 1em 4em;
+  --base-padding: 1em 1em;
+  --box-shadow: 5px 10px 30px black;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+header {
+  height: 50vh;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+  padding: 2em 1em;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100vh;
+  height: 100vh;
+  background: #008dff;
+  border-radius: 60%;
+  transform-origin: bottom;
+  transform: translateX(-80%) scale(4);
+}
+
+.header-content {
+  z-index: 1;
+  max-width: 40%;
+  min-height: 150px;
+  background-color: aliceblue;
+}
+
+.dog-img {
+  max-width: 20%;
+  float: left;
+  transform: translateX(-130%) scale(2);
+  margin-right: -3.5em;
+  object-fit: cover;
+}
+
+.socials-container {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  margin-top: 1em;
+}
+
+@media (max-width: 1200px) {
+  body {
+    overflow-x: hidden;
+  }
+  .dog-img {
+    transform: translateX(-140%) scale(2.1);
+  }
+}
+
+@media (max-width: 900px) {
+  .header-content {
+    z-index: 1;
+    max-width: 80%;
+    min-height: 350px;
+    background-color: aliceblue;
+    padding: var(--base-padding);
+    margin-top: 3em;
+  }
+
+  .dog-img {
+    float: left;
+    transform: none;
+    transform: translateX(-5%) translateY(-55%) scale(2);
+    margin-right: 4em;
+  }
+
+  .socials-container {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    margin-top: 1em;
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    padding-top: 25em;
+    display: grid;
+  }
+
+  .header-content {
+    position: relative;
+    width: 60vh;
+  }
+
+  .dog-img {
+    float: none;
+    transform: translateY(-190%) scale(3.6);
+    margin-left: 7em;
+    position: absolute;
+    top: -24%;
+  }
+}
