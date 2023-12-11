@@ -93,7 +93,6 @@ header::before {
 }
 
 .img-container {
-  /* border: 1px solid red; */
   width: 40%;
   position: relative;
   margin: 0 auto;
@@ -110,6 +109,7 @@ header::before {
 
 .about-me-container {
   margin-top: 4em;
+  background-color: aliceblue;
 }
 
 .about-me-container h2 {
@@ -178,10 +178,42 @@ footer {
 }
 
 .footer-socials {
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   width: var(--logo-width);
   gap: 10px;
   margin: 0 auto;
+}
+
+@media (min-width: 700px) {
+  header .container {
+    padding: 6em 0em;
+  }
+  .img-container {
+    float: left;
+    position: relative;
+    height: 250px;
+    left: 40px;
+    bottom: 30px;
+  }
+
+  .img-container h1 {
+    top: 0;
+    left: 200px;
+  }
+
+  .img-container img {
+    height: 100%;
+  }
+
+  .work-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .footer-section {
+    display: grid;
+    justify-items: center;
+  }
 }
