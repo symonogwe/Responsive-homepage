@@ -186,6 +186,10 @@ footer {
 }
 
 @media (min-width: 700px) {
+  .container {
+    max-width: 1200px;
+  }
+
   header .container {
     padding: 6em 0em;
   }
@@ -215,5 +219,35 @@ footer {
   .footer-section {
     display: grid;
     justify-items: center;
+  }
+}
+
+@media (min-width: 1000px) {
+  .img-container {
+    height: 400px;
+    bottom: 0px;
+  }
+
+  .img-container h1 {
+    bottom: 0;
+    left: 0;
+  }
+
+  .header-content {
+  }
+
+  .about-me-container {
+    width: 100%;
+    margin: 0;
+  }
+
+  .socials-container {
+    justify-content: flex-end;
+    width: 40%;
+    margin: 0 auto;
+  }
+
+  .work-container {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
